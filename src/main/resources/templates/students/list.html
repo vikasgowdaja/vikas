@@ -33,7 +33,7 @@
             <table>
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>S.No</th>
                     <th>Student</th>
                     <th>Code</th>
                     <th>Department</th>
@@ -43,8 +43,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="card : ${cards}">
-                    <td th:text="${card.id}">1</td>
+                <tr th:each="card, iter : ${cards}">
+                    <td th:text="${iter.count}">1</td>
                     <td th:text="${card.studentName}">Name</td>
                     <td th:text="${card.studentCode}">CODE</td>
                     <td th:text="${card.department}">Department</td>

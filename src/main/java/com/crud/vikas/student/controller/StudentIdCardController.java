@@ -145,7 +145,7 @@ public class StudentIdCardController {
             StudentIdCard card = service.findById(id);
             model.addAttribute("card", card);
             model.addAttribute("studentPhotoPath", photoStorageService.publicPath(card.getPhotoFileName()));
-            model.addAttribute("collegeLogoPath", "/assets/CIT.jpg");
+            model.addAttribute("collegeLogoPath", "/assets/CIT.svg");
             return "students/view";
         } catch (EntityNotFoundException ex) {
             redirectAttributes.addFlashAttribute("errorMessage", ex.getMessage());
